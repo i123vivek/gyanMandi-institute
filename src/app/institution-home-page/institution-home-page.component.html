@@ -1,0 +1,401 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="">
+            <img src="assets/logo.png" width="100" height="50" class="d-inline-block align-top" alt="">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class=" ml-auto">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a (click)="scroll(features)" mat-button> FEATURES </a></li>
+                    <li class="nav-item"><a (click)="scroll(courses)" mat-button> COURSES </a></li>
+                    <!-- <li class="nav-item"><a href="#" mat-button> PRICING </a></li> -->
+                    <li class="nav-item"><a (click)="scroll(aboutUs)" mat-button> ABOUT US </a></li>
+                    <li class="nav-item">
+                        <a style="border: 2px solid rgb(68, 168, 235); color: rgb(68, 168, 235); border-radius: 20px;"
+                            mat-raised-button (click)="openLogin(login)"> LOGIN </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="row m-0 pt-5 ">
+        <div style="height: 150px; overflow: hidden; z-index: -1;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 60%; width: 100%;">
+                <path d="M0.00,92.27 C216.83,192.92 304.30,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z"
+                    style="stroke: none;fill: #36b9da;">
+                </path>
+            </svg>
+
+
+        </div>
+
+        <div style="padding-left:5%" class="col-md-6 d-flex justify-content-center">
+            <div class=" align-self-center" style="margin-top:5vh ; text-align: center;">
+                <h3 style="color: white;">A Complete Online Teaching Solution</h3>
+                <p style="color: white; font-weight: bold;">Web, Android & iOS apps | Encrypted Courses, Any Entrance
+                    Mock Test | No Transaction Fees</p>
+                <!-- [routerLink]="'/institute/registration'" -->
+                <!-- <a  [routerLink]="'/institute/registration'" class="btn btn-dark btn-lg">Register Now</a> -->
+                <a (click)="open(signUp)" class="btn btn-dark btn-lg" style="color: white;">Register Now</a>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center">
+            <img width="90%" style="border-radius: 10px;" src="../../assets/img2.jpg">
+        </div>
+    </div>
+
+    <!-- <div id="A"> -->
+
+    <div #features class="row m-0 mt-5 pt-5">
+        <div class="col-12">
+            <div>
+                <h1 style="text-align: center; color: steelblue;">Gyanmandi Test Series Features</h1>
+                <p style="text-align: center;">One platform with all the features you need to start with mock test,
+                    dashboard test analysis & reports.</p>
+            </div>
+        </div>
+    </div>
+
+    <div #prediction class="row m-0 " style="padding-top: 10vh;">
+        <div style="padding:2%" class="col-md-6 d-flex justify-content-center ">
+            <div class="align-self-center">
+                <h3 style="text-align: center; color: steelblue;">Student - Selection Predictor</h3>
+                <p style="text-align: center;">Predict the number of students getting selected every time before the
+                    real examination.</p>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center">
+            <div class="polaroid">
+                <div class="container" style="text-align: center; padding: 10px 20px;">
+                    <p style="color: steelblue;">Student Selection Prediction</p>
+                </div>
+                <img src="assets/student selection prediction.png" style="width:100%; padding: 5%;">
+
+            </div>
+        </div>
+    </div>
+
+    <div #topicToFocus class="row m-0 " style="padding-top: 10vh;">
+        <div class="col-md-6 d-flex justify-content-center">
+            <div class="polaroid">
+                <div class="container" style="text-align: center; padding: 10px 20px;">
+                    <p style="color: steelblue;">Topics To Focus</p>
+                </div>
+                <img src="assets/Topic to focus.jpg" style="width:100%; padding: 5%;">
+
+            </div>
+        </div>
+        <div style="padding:2%" class="col-md-6 d-flex justify-content-center ">
+            <div class="align-self-center">
+                <h3 style="text-align: center; color: steelblue;">Topics - To Focus</h3>
+                <p style="text-align: center;">Lets you know the topics that should be focused to ensure maximum hours
+                    for your institute and your studentas well.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div #powerfulDashboard class="row m-0 " style="padding-top: 10vh;">
+        <div style="padding:2%" class="col-md-6 d-flex justify-content-center ">
+            <div class="align-self-center">
+                <h3 style="text-align: center; color: steelblue;">A Powerful - Analytics Dashboard</h3>
+                <p style="text-align: center;">A dashboard lets you know about the strengths and weakness of students
+                    specific to every subject.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center">
+            <div class="polaroid">
+                <div class="container" style="text-align: center; padding: 10px 20px;">
+                    <p style="color: steelblue;">Students Strength</p>
+                </div>
+                <img src="assets/studentStrength.png" style="width:100%; padding: 5%;">
+
+            </div>
+        </div>
+    </div>
+
+    <div #varietyOfQuestions class="row m-0 " style="padding-top: 10vh;">
+        <div class="col-md-6 d-flex justify-content-center">
+            <div class="polaroid">
+                <!-- <div class="container" style="text-align: center; padding: 10px 20px;">
+                    <p style="color: steelblue;">Topics To Focus</p>
+                </div> -->
+                <img src="assets/variety of Questions.jpg" style="width:100%; padding: 5%;">
+
+            </div>
+        </div>
+        <div style="padding:2%" class="col-md-6 d-flex justify-content-center ">
+            <div class="align-self-center">
+                <h3 style="text-align: center; color: steelblue;">Variety of - Questions</h3>
+                <p style="text-align: center;">MCQ, NDT, MCCQ type of questions are Covered with language support in
+                    English and Hindi.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0 " style="padding-top: 10vh;">
+        <div style="padding:2%" class="col-md-6 d-flex justify-content-center ">
+            <div class="align-self-center">
+                <h3 style="text-align: center; color: steelblue;">What Else?</h3>
+                <!-- <p style="text-align: center;">A dashboard lets you know about the strengths and weakness of students
+                    specific to every subject.
+                </p> -->
+                <ul>
+                    <li>Conduct Live Tests on your platform</li>
+                    <li>Assign test into different section with different time alloted for each section</li>
+                    <li>Analyse the performance of your whole class</li>
+                    <li>Analyse the performance of your teachers</li>
+                    <li>Manage students related data and more</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center">
+            <div class="polaroid">
+                <!-- <div class="container" style="text-align: center; padding: 10px 20px;">
+                    <p style="color: steelblue;">Students Strength</p>
+                </div> -->
+                <img src="assets/test.jpg" style="width:100%; padding: 5%;">
+
+            </div>
+        </div>
+    </div>
+
+    <div #courses class="row m-0" style="padding-top: 10vh;">
+        <div class="col-12">
+            <div>
+                <h3 style="text-align: center; color: steelblue;">We offer a wide range of courses</h3>
+                <p style="text-align: center;">One platform with all the features you need to start with mock test,
+                    dashboard, test analysis & reports</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row  justify-content-center" style="padding-top: 5vh;">
+        <div class="col-md-1 ml-5 mr-5">
+            <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div class="card-header" style="color: #5bc0de; font-weight: bold; text-align: center;">
+                    IIT JEE
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-1 mr-5">
+            <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div class="card-header" style="color: #5bc0de; font-weight: bold; text-align: center;">
+                    AIEEE
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-1 mr-5">
+            <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div class="card-header" style="color: #5bc0de; font-weight: bold; text-align: center;">
+                    CAT
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-1 mr-5">
+            <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div class="card-header" style="color: #5bc0de; font-weight: bold; text-align: center;">
+                    AIIMS
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row  justify-content-center" style="padding-top: 5vh;">
+        <div class="col-md-1 ml-5 mr-5">
+            <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div class="card-header" style="color: #5bc0de; font-weight: bold; text-align: center;">
+                    IIT JEE
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-1 mr-5">
+            <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div class="card-header" style="color: #5bc0de; font-weight: bold; text-align: center;">
+                    AIEEE
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-1 mr-5">
+            <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div class="card-header" style="color: #5bc0de; font-weight: bold; text-align: center;">
+                    CAT
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-1 mr-5">
+            <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div class="card-header" style="color: #5bc0de; font-weight: bold; text-align: center;">
+                    AIIMS
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <nav>
+        <div class="nav nav-tabs mt-5 p-3 justify-content-center" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab"
+                aria-controls="nav-about" aria-selected="true">About us</a>
+            <a class="nav-item nav-link" id="nav-team-tab" data-toggle="tab" href="#nav-team" role="tab"
+                aria-controls="nav-team" aria-selected="false">Our Team</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div #aboutUs class="tab-pane fade show active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+            <div class="col-lg-5 " style="float:none;margin:auto;height: 25rem;">
+                <p class="text-center pt-5" style="font-size: large;">We are here to redefine the term Ed-Tech.
+                    Presently Ed-Tech means getting away with
+                    infrastructure and logistical costs when it could mean much more.
+                    Advancements in data sciences have been neglected in this field altogether. Analytics can lend a big
+                    helping hand to the students in their preparation and learning process. Exactly figuring out if the
+                    lack
+                    is in understanding or practice in every topic and subject and if the preparation level is apt for
+                    the
+                    examination are some of the problems which can only be tackled by a very high teacher student ratio
+                    or
+                    data analytics.
+                    We’ve envisioned this portal to be a helping hand in assessing and helping both teachers and
+                    students in
+                    better assessment and learning to get substantially better results.</p>
+            </div>
+
+        </div>
+        <div #ourTeam class="tab-pane fade" id="nav-team" role="tabpanel" aria-labelledby="nav-team-tab">
+            <div class="row d-flex justify-content-center pt-3" style="height: 25rem;">
+
+                <div class="card m-2" style="width: 18rem;">
+                    <img src="assets/anchal.jpeg" class="card-img-top" alt="Anchal">
+                    <div class="card-body">
+                        <h5 class="card-title">Anchal kumar</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+                <div class="card m-2" style="width: 18rem;">
+                    <img src="assets/vaibhav.jpg" class="card-img-top" alt="vaibhav">
+                    <div class="card-body">
+                        <h5 class="card-title">Vaibhav Rai</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+
+                <div class="card m-2" style="width: 18rem; ">
+                    <img src="assets/vivek1.jpg" class="card-img-top" alt="vivek">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivek Rai</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="A">
+
+</div>
+
+
+
+<footer id="B" class="page-footer font-small">
+
+    <div class="container-fluid text-center pt-5 ">
+
+        <div class="row">
+            <div class="col-4 justify-content-center">
+
+                <h6 class="text-uppercase" style="color: white;">FEATURES</h6>
+                <ul class="list-unstyled pt-3">
+                    <li class="p-1 ">
+                        <a style="color: white; cursor: pointer;" (click)="scroll(prediction)">Student Selection Predictor</a>
+                    </li>
+                    <li class="p-1">
+                        <a style="color: white; cursor: pointer;" (click)="scroll(topicToFocus)" >Topics To Focus</a>
+                    </li>
+                    <li class="p-1">
+                        <a style="color: white; cursor: pointer;" (click)="scroll(powerfulDashboard)" >Powerful Dashboard</a>
+                    </li>
+                    <li class="p-1">
+                        <a style="color: white; cursor: pointer;" (click)="scroll(varietyOfQuestions)" >Variety of
+                            Questions</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- <hr class="clearfix w-100 d-md-none pb-3"> -->
+
+            <!-- <div class="col-3 ">
+
+                <h6 class="text-uppercase" style="color: white;">Resources</h6>
+
+                <ul class="list-unstyled">
+                    
+                    <li>
+                        <a style="color: white;" (click)="scroll(courses)" mat-button>Courses</a>
+                    </li>
+                    <li>
+                        <a style="color: white;" (click)="scroll(documentation)" mat-button>Documentation</a>
+                    </li>
+                </ul>
+
+            </div> -->
+
+            <div class="col-4 ">
+
+                <h6 class="text-uppercase" style="color: white;">Company</h6>
+
+                <ul class="list-unstyled pt-2">
+                    
+                    <div class="nav flex-column justify-content-center" id="nav-tab">
+                        
+                        <a class="nav-item nav-link active " id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab"
+                            aria-controls="nav-about" style="color: white;" aria-selected="true">About us</a>
+                        <a class="nav-item nav-link p-0" id="nav-team-tab" data-toggle="tab" href="#nav-team" role="tab"
+                            aria-controls="nav-team" style="color: white;" aria-selected="false">Our Team</a>
+                    </div>
+                    
+                </ul>
+
+            </div>
+
+            <div class="col-4 ">
+
+                <h6 class="text-uppercase" style="color: white;">Contact</h6>
+
+                <ul class="list-unstyled pt-3">
+                    <li>
+                        <a style="color: white;">info@gyanmandi.com</a>
+                    </li>
+                    <li class="text-center pl-5 pr-5 ml-5 mr-5 pt-3 d-flex justify-content-center">
+                        <a class="text-center pl-5 pr-5" style="color: white;">H69, 1st floor, Residency Greens,
+                            Gurgaon, Haryana. 122002</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+</footer>

@@ -1,0 +1,89 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color:rgb(18, 155, 247);
+    position: fixed;
+    height: 100vmax;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+}
+   
+.sidebar a.active {
+    background-color: rgb(51, 174, 245);
+    color: white;
+}
+  
+.sidebar a:hover:not(.active) {
+    background-color: rgb(51, 174, 245);
+    color: white;
+}
+  
+.navbar {
+    padding: 1px 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.content {
+    margin-left: 200px;
+    padding: 50px 20px;
+    /* height: 100vmax; */
+}
+
+/* .ng-valid[required] , .ng-valid.required {
+    border-left :5px solid green;  
+}
+  
+.ng-invalid:not(form) {  
+    border-left :5px solid red;
+} */
+  
+/* .cursorPointer {
+    cursor: pointer;
+} */
+
+::ng-deep .multiselect-dropdown .dropdown-down{
+    border-top: 6px solid #131212 !important;
+    border-left: 4px solid transparent !important;
+    border-right: 4px solid transparent !important;
+    }
+    
+    ::ng-deep .multiselect-dropdown .dropdown-up{
+    border-bottom: 6px solid #131212 !important;
+    border-left: 4px solid transparent !important;
+    border-right: 4px solid transparent !important;
+    }
+    
+    ::ng-deep .multiselect-dropdown .dropdown-btn {
+    border: 1px solid #999 !important;
+    border-radius: 0px !important;
+    }
+    
+    ::ng-deep .dropdown-btn > span {
+    color: rgb(124, 116, 116);
+    }
+  
+  
+@media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.navbar {margin-left: 0;}
+}
+  
+@media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+}

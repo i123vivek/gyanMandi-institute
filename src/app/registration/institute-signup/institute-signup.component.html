@@ -1,0 +1,140 @@
+<div class=" card card-signin">
+	<div class="modal-body">
+		<div class="card-body">
+            <a type="button" class="close pull-right" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </a>
+			<h3 class="card-title text-center" style="font-weight: bold; color: #5bc0de;">Welcome to
+                GyanMandi</h3>
+                
+            <p class="card-title text-center" style="font-weight: 500; ">Analytical Test Platform</p>
+            <form class="form-signin" [formGroup]="signUpForm">
+                <input type="text" autofocus="autofocus" style="display:none" />
+
+                <div class="form-group">
+                    <span style="color:black">Institute Name* : </span>
+                    <label for="inputName" class="sr-only">Institute Name</label>
+                    <input type="text" id="inputName" class="form-control"
+                        style="border-radius: 25px; padding: 15px;" formControlName="instituteName"
+                        placeholder="Institute Name">
+                </div>
+
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.instituteName">
+                        <div class="error-message"
+                            *ngIf="signUpForm.get('instituteName').hasError(error.type) && (signUpForm.get('instituteName').dirty || signUpForm.get('instituteName').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+
+                <div class="form-group">
+                    <span style="color: black">Mobile Number*: </span>
+                    <label for="inputMobile" class="sr-only">Mobile Number</label>
+                    <input type="text" id="inputMobile" class="form-control"
+                        style="border-radius: 25px; padding: 15px;" formControlName="mobileNumber"
+                        placeholder="Mobile Number">
+                </div>
+
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.mobileNumber">
+                        <div class="error-message"
+                            *ngIf="signUpForm.get('mobileNumber').hasError(error.type) && (signUpForm.get('mobileNumber').dirty || signUpForm.get('mobileNumber').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+
+                <div class="form-group">
+                    <span style="color: black">Email*: </span>
+                    <label for="inputEmail" class="sr-only">Email</label>
+                    <input type="text" id="inputEmail" class="form-control"
+                        style="border-radius: 25px; padding: 15px;" formControlName="email"
+                        placeholder="Email Address">
+                </div>
+
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.email">
+                        <div class="error-message"
+                            *ngIf="signUpForm.get('email').hasError(error.type) && (signUpForm.get('email').dirty || signUpForm.get('email').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+
+                <div class="form-group">
+                    <span style="color: black">Password*: </span>
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" class="form-control"
+                        style="border-radius: 25px; padding: 15px;" formControlName="password"
+                        placeholder="Password">
+                </div>
+
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.password">
+                        <div class="error-message"
+                            *ngIf="signUpForm.get('password').hasError(error.type) && (signUpForm.get('password').dirty || signUpForm.get('password').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+
+                <div class="form-group form-check">
+
+                    <input type="checkbox" 
+                        (change)="toggleVisibility($event)" >
+                        By Signing up, you agree to the
+                        terms & conditions
+
+                
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block text-uppercase mt-5" type="submit" 
+                     (click)="activeModal.dismiss('Cross click');openOtpModal(templatefirst)">Register</button>
+                     <!-- [disabled]="!marked ||!signUpForm.valid" -->
+                <div class="d-flex justify-content-center p-1">
+                    Already a member? &nbsp; <a style="color: cornflowerblue;cursor: pointer;"  (click)="activeModal.dismiss('Cross click');openLogin(login)">  Login</a>
+                </div>
+                
+            </form>
+		</div>
+	</div>
+</div>
+
+
+<ng-template #templatefirst>
+    <div class="modal-header">
+        <h5 class="modal-title" style="text-align: center;">Please Verify Number</h5>
+
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body" >
+        
+        <p style="text-align: center;">We have sent you an OTP to your registered number. </p>
+
+        <form >
+            <input type="text" autofocus="autofocus" style="display:none" />
+            <div class="form-group p-3" style="text-align: center;">
+                <!-- <label>OTP :</label> -->
+                <input type="text" name="otp" [(ngModel)]="otp" class="form-control" #Otp="ngModel" placeholder="enter otp">
+            
+            </div>
+
+            <div class="col-6 mt-4 d-flex mx-auto">
+                <button class="btn btn-lg btn-primary btn-block" style="border-radius: 5rem;" type="submit" (click)="modalRef.hide();verifyOtp()">Verify</button>
+            </div>
+                
+             
+
+            <div class="mt-4">
+                <div class="d-flex justify-content-center links">
+                    Did not receive OTP? &nbsp; <a style="color: cornflowerblue;cursor: pointer;" class="ml-2">Resend</a>
+                </div>
+            </div>
+
+        </form>
+        <br />
+    </div>
+</ng-template>

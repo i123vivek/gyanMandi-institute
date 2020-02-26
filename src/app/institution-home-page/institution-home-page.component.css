@@ -1,0 +1,75 @@
+svg {
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    left: 0;
+  }
+  
+  .polaroid {
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+  }
+
+  .polaroid1 {
+    width: 100%;
+    background-color: white;  
+    /* margin-bottom: 25px; */
+  }
+
+
+  #A {
+    background-color: #FFFFFF;
+  }
+  
+  #B {
+    background: #36b9da;
+  }
+  
+  #A::after {
+    content: "";
+    position: relative;
+    /* position: absolute; */
+    left: -3rem;
+    /* padding * -1 */
+    top: calc( 3rem - 4rem / 2);
+    /* padding - height/2 */
+    float: left;
+    display: block;
+    height: 5rem;
+    width: 99.2vw;
+    background: hsla(0, 0%, 100%, 0.5);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 70 500 60' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='500' height='500' style='stroke: none; fill: %2336b9da' /%3E%3Cpath d='M0.00,92.27 C216.83,192.92 304.30,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z' style='stroke: none; fill: %23ffffff;'%3E%3C/path%3E%3C/svg%3E");
+    /* background-size: 100% 100%; */
+  }
+  
+  
+  /** Cosmetics **/
+  
+  * {
+    margin: 0;
+  }
+  
+  #A,
+  #B {
+    padding: 3rem;
+  }
+  
+  /* div {
+    font-family: monospace;
+    font-size: 1.2rem;
+    line-height: 1.2;
+  } */
+  
+  /* #A {
+    color: white;
+  } */
+
+  @media (max-width: 991px){
+    
+    .nav{
+      display: block;
+      float: right;
+    }
+  }
